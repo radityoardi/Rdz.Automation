@@ -1,0 +1,46 @@
+{
+  "name": "Rdz.Automation",
+  "version": "1.0.0",
+  "description": "Functions repository for Power Automate or Logic Apps, published on Netlify.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "4.18.2",
+    "netlify-lambda": "2.0.15",
+    "serverless-http": "3.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "jest": "^29.1.2",
+    "supertest": "6.3.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radityoardi/Rdz.Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radityoardi/Rdz.Automation/issues"
+  },
+  "homepage": "https://github.com/radityoardi/Rdz.Automation#readme",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "functions",
+      "node_modules"
+    ]
+  }
+}
